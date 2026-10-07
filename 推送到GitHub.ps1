@@ -52,8 +52,17 @@ $url = git remote get-url origin
 Ok "远程 origin = $url"
 
 # ---------- 3. 推送 ----------
+Info '先取回远程状态 ...'
+cmd.exe /c "git fetch origin 2>&1" | Out-Null
+$lr = @(cmd.exe /c "git rev-list --left-right --count origin/main...main 2>nul")
+if ($lr.Count -ge 1 -and $lr[0] -match '^\s*(\d+)\s+\d+\s*$' -and [int]$Matches[1] -gt 0) {
+    Warn "远程比本地新（落后 $($Matches[1]) 个提交），已中止推送。"
+    Write-Host '    先执行： git pull --rebase origin main   然后重跑本脚本' -ForegroundColor Yellow
+    Read-Host '按回车键退出'; exit 1
+}
+
 Info '推送到 origin/main ...'
-git push -u origin main
+cmd.exe /c "git push -u origin main"
 
 if ($LASTEXITCODE -ne 0) {
     Warn '推送失败。常见原因与对策：'

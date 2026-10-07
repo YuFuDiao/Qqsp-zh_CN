@@ -1,6 +1,12 @@
 MIT License
 
-Copyright (c) 2026 YuFuDiao
+Copyright (c) 2026 YuFuDiao (Simplified Chinese localization: language pack,
+patch tooling and documentation in this repository)
+
+The patched player binary and the Qt source excerpts in this repository are
+derived from Qqsp by Sonnix, which is distributed under the MIT License:
+
+    Copyright (c) 2017-2018 Sonnix
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
