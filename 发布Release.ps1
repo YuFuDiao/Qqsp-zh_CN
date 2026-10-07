@@ -22,7 +22,13 @@ $Branch = 'main'
 # ---- the release we publish ----
 $Tag      = 'v1.9.0-zh_CN'
 $RelName  = 'Qqsp 1.9.0 汉化便携版'
-$AssetSrc = 'F:\Qqsp-1.9.0-win64.rar'
+# Prefer an asset stored next to this script (keeps the machine-specific path
+# out of the published script); fall back to a local copy on F:.
+$AssetCandidates = @(
+    (Join-Path $PSScriptRoot $AssetName),
+    (Join-Path $PSScriptRoot 'Qqsp-1.9.0-win64.rar'),
+    'F:\Qqsp-1.9.0-win64.rar'
+)
 $AssetName = 'Qqsp-1.9.0-win64-zh_CN.rar'
 $AssetSha = '7f1d2d011187ae6268d3777ecd8268131d18ca4c7e575cf0827bd82f252e00f9'
 
@@ -36,7 +42,10 @@ Write-Host '=== 发布 Qqsp 汉化便携版到 GitHub Releases ==='
 Write-Host ''
 
 # ---------- 1. the asset ----------
-if (-not (Test-Path -LiteralPath $AssetSrc)) { Die "找不到附件: $AssetSrc" }
+$AssetSrc = $AssetCandidates | Where-Object { Test-Path -LiteralPath $_ } | Select-Object -First 1
+if (-not $AssetSrc) {
+    Die ("找不到附件。请把 {0} 放到本脚本同目录，或放到 F:\ 下。" -f $AssetName)
+}
 $bad = [regex]::Matches($AssetName, '[^A-Za-z0-9._-]')
 if ($bad.Count -gt 0) { Die "附件名含非法字符: $AssetName" }
 $len = (Get-Item -LiteralPath $AssetSrc).Length

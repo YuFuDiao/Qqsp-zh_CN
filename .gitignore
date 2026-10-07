@@ -17,3 +17,8 @@ pylibs/
 .idea/
 Thumbs.db
 desktop.ini
+
+# ---- release assets (kept out of git; upload to Releases instead) ----
+*.rar
+*.7z
+*.zip
