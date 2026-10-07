@@ -1,0 +1,2 @@
+# Only the exe patcher needs a third-party module; the .qm toolchain is pure stdlib.
+capstone>=5.0.2

@@ -1,0 +1,81 @@
+﻿0x1400103f0  call qword ptr [rip + 0x37d92]   ; CALL ?applicationDirPath@QCoreApplication@@SA?AVQString@@XZ
+0x1400103f6  mov rbx, rax
+0x1400103f9  xor r14d, r14d
+0x1400103fc  mov dword ptr [rbp + 0xb0], r14d
+0x140010403  mov dword ptr [rbp + 0x90], 2
+0x14001040d  lea rdx, [rsp + 0x50]
+0x140010412  lea rcx, [rsp + 0x38]
+0x140010417  call 0x14000a510
+0x14001041c  mov dword ptr [rsp + 0x20], r14d
+0x140010421  lea r9d, [r14 + 2]
+0x140010425  lea r8, [rsp + 0x38]
+0x14001042a  mov rdx, rbx
+0x14001042d  lea rcx, [rsp + 0x30]
+0x140010432  call qword ptr [rip + 0x38058]   ; CALL ??0QDirIterator@@QEAA@AEBVQString@@AEBVQStringList@@V?$QFlags@W4Filter@QDir@@@@V?$QFlags@W4IteratorFlag@QDirIterator@@@@@Z
+0x140010438  nop 
+0x140010439  lea rcx, [rbp + 0x28]
+0x14001043d  call qword ptr [rip + 0x37ded]   ; CALL ??1QString@@QEAA@XZ
+0x140010443  nop 
+0x140010444  mov rax, qword ptr [rsp + 0x38]
+0x140010449  mov ecx, dword ptr [rax]
+0x14001044b  test ecx, ecx
+0x14001044d  je 0x140010464
+0x14001044f  cmp ecx, -1
+0x140010452  je 0x1400104ac
+0x140010454  mov rax, qword ptr [rsp + 0x38]
+0x140010459  lock add dword ptr [rax], -1
+0x14001045d  setne al
+0x140010460  test al, al
+0x140010462  jne 0x1400104ac
+0x140010464  mov rsi, qword ptr [rsp + 0x38]
+0x140010469  movsxd rdi, dword ptr [rsi + 8]
+0x14001046d  add rdi, 2
+0x140010471  lea rdi, [rsi + rdi*8]
+0x140010475  movsxd rbx, dword ptr [rsi + 0xc]
+0x140010479  add rbx, 2
+0x14001047d  lea rbx, [rsi + rbx*8]
+0x140010481  cmp rbx, rdi
+0x140010484  je 0x1400104a2
+0x140010486  nop word ptr [rax + rax]
+0x140010490  sub rbx, 8
+0x140010494  mov rcx, rbx
+0x140010497  call qword ptr [rip + 0x37d93]   ; CALL ??1QString@@QEAA@XZ
+0x14001049d  cmp rbx, rdi
+0x1400104a0  jne 0x140010490
+0x1400104a2  mov rcx, rsi
+0x1400104a5  call qword ptr [rip + 0x37d5d]   ; CALL ?dispose@QListData@@SAXPEAUData@1@@Z
+0x1400104ab  nop 
+0x1400104ac  lea rcx, [rsp + 0x50]
+0x1400104b1  call qword ptr [rip + 0x37d79]   ; CALL ??1QString@@QEAA@XZ
+0x1400104b7  lea rcx, [rsp + 0x30]
+0x1400104bc  call qword ptr [rip + 0x37fb6]   ; CALL ?hasNext@QDirIterator@@QEBA_NXZ
+0x1400104c2  test al, al
+0x1400104c4  je 0x14001068d
+0x1400104ca  nop word ptr [rax + rax]
+0x1400104d0  lea rdx, [rbp + 0x30]
+0x1400104d4  lea rcx, [rsp + 0x30]
+0x1400104d9  call qword ptr [rip + 0x37fa1]   ; CALL ?next@QDirIterator@@QEAA?AVQString@@XZ
+0x1400104df  lea rcx, [rbp + 0x30]
+0x1400104e3  call qword ptr [rip + 0x37d47]   ; CALL ??1QString@@QEAA@XZ
+0x1400104e9  lea rdx, [rsp + 0x60]
+0x1400104ee  lea rcx, [rsp + 0x30]
+0x1400104f3  call qword ptr [rip + 0x37f77]   ; CALL ?fileInfo@QDirIterator@@QEBA?AVQFileInfo@@XZ
+0x1400104f9  nop 
+0x1400104fa  xor edx, edx
+0x1400104fc  lea rcx, [rbp - 0x50]
+0x140010500  call qword ptr [rip + 0x37cca]   ; CALL ??0QTranslator@@QEAA@PEAVQObject@@@Z
+0x140010506  nop 
+0x140010507  lea rcx, [rbp + 0x50]
+0x14001050b  call qword ptr [rip + 0x37d2f]   ; CALL ??0QString@@QEAA@XZ
+0x140010511  mov rsi, rax
+0x140010514  lea rcx, [rbp + 0x48]
+0x140010518  call qword ptr [rip + 0x37d22]   ; CALL ??0QString@@QEAA@XZ
+0x14001051e  mov rdi, rax
+0x140010521  lea rdx, [rbp + 0x40]
+0x140010525  lea rcx, [rsp + 0x60]
+0x14001052a  call qword ptr [rip + 0x37f68]   ; CALL ?absolutePath@QFileInfo@@QEBA?AVQString@@XZ
+0x140010530  mov rbx, rax
+0x140010533  lea rdx, [rbp + 0x38]
+0x140010537  lea rcx, [rsp + 0x60]
+0x14001053c  call qword ptr [rip + 0x37f5e]   ; CALL ?completeBaseName@QFileInfo@@QEBA?AVQString@@XZ
+0x140010542  nop 

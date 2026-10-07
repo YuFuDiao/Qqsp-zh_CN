@@ -1,0 +1,19 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+.pylibs/
+pylibs/
+
+# ---- local working files ----
+*.log
+*.bak-*
+*.tmp
+*.swp
+*~
+
+# ---- editor / OS ----
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

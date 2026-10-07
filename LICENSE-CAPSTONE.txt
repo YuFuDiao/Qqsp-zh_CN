@@ -1,0 +1,7 @@
+capstone is required only by the PE/disassembly helpers in tools/ and analysis/.
+It is not vendored in this repository; install it with:
+
+    pip install capstone
+
+capstone is distributed under the BSD 3-Clause License.
+Upstream: https://www.capstone-engine.org/  |  https://github.com/capstone-engine/capstone

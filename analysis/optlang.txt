@@ -1,0 +1,227 @@
+﻿0x140010540  add eax, dword ptr [rax]
+0x140010542  nop 
+0x140010543  mov qword ptr [rsp + 0x20], rsi
+0x140010548  mov r9, rdi
+0x14001054b  mov r8, rbx
+0x14001054e  mov rdx, rax
+0x140010551  lea rcx, [rbp - 0x50]
+0x140010555  call qword ptr [rip + 0x37c65]   ; CALL ?load@QTranslator@@QEAA_NAEBVQString@@000@Z
+0x14001055b  movzx ebx, al
+0x14001055e  lea rcx, [rbp + 0x38]
+0x140010562  call qword ptr [rip + 0x37cc8]   ; CALL ??1QString@@QEAA@XZ
+0x140010568  nop 
+0x140010569  lea rcx, [rbp + 0x40]
+0x14001056d  call qword ptr [rip + 0x37cbd]   ; CALL ??1QString@@QEAA@XZ
+0x140010573  nop 
+0x140010574  lea rcx, [rbp + 0x48]
+0x140010578  call qword ptr [rip + 0x37cb2]   ; CALL ??1QString@@QEAA@XZ
+0x14001057e  nop 
+0x14001057f  lea rcx, [rbp + 0x50]
+0x140010583  call qword ptr [rip + 0x37ca7]   ; CALL ??1QString@@QEAA@XZ
+0x140010589  test bl, bl
+0x14001058b  je 0x140010664
+0x140010591  mov dword ptr [rsp + 0x28], 0xffffffff
+0x140010599  mov qword ptr [rsp + 0x20], r14
+0x14001059e  lea r9, [rip + 0x39f4b]   ; "__LANGID__"
+0x1400105a5  lea r8, [rip + 0x3e75c]   ; "__LANG__"
+0x1400105ac  lea rdx, [rbp + 0x68]
+0x1400105b0  lea rcx, [rbp - 0x50]
+0x1400105b4  call qword ptr [rip + 0x37eae]   ; CALL ?translate@QTranslator@@UEBA?AVQString@@PEBD00H@Z
+0x1400105ba  nop 
+0x1400105bb  mov rdx, rax
+0x1400105be  lea rcx, [rbp + 0xf0]
+0x1400105c5  call qword ptr [rip + 0x37c15]   ; CALL ??0QVariant@@QEAA@AEBVQString@@@Z
+0x1400105cb  mov r14, rax
+0x1400105ce  mov dword ptr [rsp + 0x28], 0xffffffff
+0x1400105d6  mov qword ptr [rsp + 0x20], 0
+0x1400105df  lea r9, [rip + 0x39efa]   ; "__LANGNAME__"
+0x1400105e6  lea r8, [rip + 0x3e71b]   ; "__LANG__"
+0x1400105ed  lea rdx, [rbp + 0x60]
+0x1400105f1  lea rcx, [rbp - 0x50]
+0x1400105f5  call qword ptr [rip + 0x37e6d]   ; CALL ?translate@QTranslator@@UEBA?AVQString@@PEBD00H@Z
+0x1400105fb  mov rsi, rax
+0x1400105fe  mov rax, qword ptr [r15 + 0x30]
+0x140010602  mov rdi, qword ptr [rax + 0x78]
+0x140010606  mov rcx, rdi
+0x140010609  call qword ptr [rip + 0x38e11]   ; CALL ?count@QComboBox@@QEBAHXZ
+0x14001060f  mov ebx, eax
+0x140010611  lea rcx, [rbp + 0x58]
+0x140010615  call qword ptr [rip + 0x38405]   ; CALL ??0QIcon@@QEAA@XZ
+0x14001061b  nop 
+0x14001061c  mov qword ptr [rsp + 0x20], r14
+0x140010621  mov r9, rsi
+0x140010624  mov r8, rax
+0x140010627  mov edx, ebx
+0x140010629  mov rcx, rdi
+0x14001062c  call qword ptr [rip + 0x38dce]   ; CALL ?insertItem@QComboBox@@QEAAXHAEBVQIcon@@AEBVQString@@AEBVQVariant@@@Z
+0x140010632  nop 
+0x140010633  lea rcx, [rbp + 0x58]
+0x140010637  call qword ptr [rip + 0x3834b]   ; CALL ??1QIcon@@QEAA@XZ
+0x14001063d  nop 
+0x14001063e  lea rcx, [rbp + 0x60]
+0x140010642  call qword ptr [rip + 0x37be8]   ; CALL ??1QString@@QEAA@XZ
+0x140010648  nop 
+0x140010649  lea rcx, [rbp + 0xf0]
+0x140010650  call qword ptr [rip + 0x37b92]   ; CALL ??1QVariant@@QEAA@XZ
+0x140010656  nop 
+0x140010657  lea rcx, [rbp + 0x68]
+0x14001065b  call qword ptr [rip + 0x37bcf]   ; CALL ??1QString@@QEAA@XZ
+0x140010661  xor r14d, r14d
+0x140010664  lea rcx, [rbp - 0x50]
+0x140010668  call qword ptr [rip + 0x37b5a]   ; CALL ??1QTranslator@@UEAA@XZ
+0x14001066e  nop 
+0x14001066f  lea rcx, [rsp + 0x60]
+0x140010674  call qword ptr [rip + 0x37ae6]   ; CALL ??1QFileInfo@@QEAA@XZ
+0x14001067a  lea rcx, [rsp + 0x30]
+0x14001067f  call qword ptr [rip + 0x37df3]   ; CALL ?hasNext@QDirIterator@@QEBA_NXZ
+0x140010685  test al, al
+0x140010687  jne 0x1400104d0
+0x14001068d  mov edx, 4
+0x140010692  lea rcx, [rip + 0x3e663]   ; "*.qm"
+0x140010699  call qword ptr [rip + 0x37b71]   ; CALL ?fromAscii_helper@QString@@CAPEAU?$QTypedArrayData@G@@PEBDH@Z
+0x14001069f  mov qword ptr [rsp + 0x70], rax
+0x1400106a4  mov edx, 0xf
+0x1400106a9  lea rcx, [rip + 0x39e80]   ; ":/translations/"
+0x1400106b0  call qword ptr [rip + 0x37b5a]   ; CALL ?fromAscii_helper@QString@@CAPEAU?$QTypedArrayData@G@@PEBDH@Z
+0x1400106b6  mov qword ptr [rsp + 0x78], rax
+0x1400106bb  mov rax, qword ptr [rip + 0x37f4e]   ; ?shared_null@QListData@@2UData@1@B
+0x1400106c2  mov qword ptr [rsp + 0x40], rax
+0x1400106c7  mov dword ptr [rsp + 0x58], r14d
+0x1400106cc  mov dword ptr [rsp + 0x5c], 2
+0x1400106d4  lea rdx, [rsp + 0x70]
+0x1400106d9  lea rcx, [rsp + 0x40]
+0x1400106de  call 0x14000a510
+0x1400106e3  mov dword ptr [rsp + 0x20], r14d
+0x1400106e8  mov r9d, 2
+0x1400106ee  lea r8, [rsp + 0x40]
+0x1400106f3  lea rdx, [rsp + 0x78]
+0x1400106f8  lea rcx, [rsp + 0x48]
+0x1400106fd  call qword ptr [rip + 0x37d8d]   ; CALL ??0QDirIterator@@QEAA@AEBVQString@@AEBVQStringList@@V?$QFlags@W4Filter@QDir@@@@V?$QFlags@W4IteratorFlag@QDirIterator@@@@@Z
+0x140010703  nop 
+0x140010704  mov rax, qword ptr [rsp + 0x40]
+0x140010709  mov ecx, dword ptr [rax]
+0x14001070b  test ecx, ecx
+0x14001070d  je 0x140010724
+0x14001070f  cmp ecx, -1
+0x140010712  je 0x14001076c
+0x140010714  mov rax, qword ptr [rsp + 0x40]
+0x140010719  lock add dword ptr [rax], -1
+0x14001071d  setne al
+0x140010720  test al, al
+0x140010722  jne 0x14001076c
+0x140010724  mov rsi, qword ptr [rsp + 0x40]
+0x140010729  movsxd rdi, dword ptr [rsi + 8]
+0x14001072d  add rdi, 2
+0x140010731  lea rdi, [rsi + rdi*8]
+0x140010735  movsxd rbx, dword ptr [rsi + 0xc]
+0x140010739  add rbx, 2
+0x14001073d  lea rbx, [rsi + rbx*8]
+0x140010741  cmp rbx, rdi
+0x140010744  je 0x140010762
+0x140010746  nop word ptr [rax + rax]
+0x140010750  sub rbx, 8
+0x140010754  mov rcx, rbx
+0x140010757  call qword ptr [rip + 0x37ad3]   ; CALL ??1QString@@QEAA@XZ
+0x14001075d  cmp rbx, rdi
+0x140010760  jne 0x140010750
+0x140010762  mov rcx, rsi
+0x140010765  call qword ptr [rip + 0x37a9d]   ; CALL ?dispose@QListData@@SAXPEAUData@1@@Z
+0x14001076b  nop 
+0x14001076c  lea rcx, [rsp + 0x78]
+0x140010771  call qword ptr [rip + 0x37ab9]   ; CALL ??1QString@@QEAA@XZ
+0x140010777  nop 
+0x140010778  lea rcx, [rsp + 0x70]
+0x14001077d  call qword ptr [rip + 0x37aad]   ; CALL ??1QString@@QEAA@XZ
+0x140010783  lea rcx, [rsp + 0x48]
+0x140010788  call qword ptr [rip + 0x37cea]   ; CALL ?hasNext@QDirIterator@@QEBA_NXZ
+0x14001078e  test al, al
+0x140010790  je 0x140010981
+0x140010796  nop word ptr [rax + rax]
+0x1400107a0  lea rdx, [rbp + 0x70]
+0x1400107a4  lea rcx, [rsp + 0x48]
+0x1400107a9  call qword ptr [rip + 0x37cd1]   ; CALL ?next@QDirIterator@@QEAA?AVQString@@XZ
+0x1400107af  lea rcx, [rbp + 0x70]
+0x1400107b3  call qword ptr [rip + 0x37a77]   ; CALL ??1QString@@QEAA@XZ
+0x1400107b9  lea rdx, [rsp + 0x68]
+0x1400107be  lea rcx, [rsp + 0x48]
+0x1400107c3  call qword ptr [rip + 0x37ca7]   ; CALL ?fileInfo@QDirIterator@@QEBA?AVQFileInfo@@XZ
+0x1400107c9  nop 
+0x1400107ca  xor edx, edx
+0x1400107cc  lea rcx, [rbp - 0x60]
+0x1400107d0  call qword ptr [rip + 0x379fa]   ; CALL ??0QTranslator@@QEAA@PEAVQObject@@@Z
+0x1400107d6  nop 
+0x1400107d7  lea rcx, [rbp + 0xb8]
+0x1400107de  call qword ptr [rip + 0x37a5c]   ; CALL ??0QString@@QEAA@XZ
+0x1400107e4  mov rsi, rax
+0x1400107e7  lea rcx, [rbp + 0x88]
+0x1400107ee  call qword ptr [rip + 0x37a4c]   ; CALL ??0QString@@QEAA@XZ
+0x1400107f4  mov rdi, rax
+0x1400107f7  lea rdx, [rbp + 0x80]
+0x1400107fe  lea rcx, [rsp + 0x68]
+0x140010803  call qword ptr [rip + 0x37c8f]   ; CALL ?absolutePath@QFileInfo@@QEBA?AVQString@@XZ
+0x140010809  mov rbx, rax
+0x14001080c  lea rdx, [rbp + 0x78]
+0x140010810  lea rcx, [rsp + 0x68]
+0x140010815  call qword ptr [rip + 0x37c85]   ; CALL ?completeBaseName@QFileInfo@@QEBA?AVQString@@XZ
+0x14001081b  nop 
+0x14001081c  mov qword ptr [rsp + 0x20], rsi
+0x140010821  mov r9, rdi
+0x140010824  mov r8, rbx
+0x140010827  mov rdx, rax
+0x14001082a  lea rcx, [rbp - 0x60]
+0x14001082e  call qword ptr [rip + 0x3798c]   ; CALL ?load@QTranslator@@QEAA_NAEBVQString@@000@Z
+0x140010834  movzx ebx, al
+0x140010837  lea rcx, [rbp + 0x78]
+0x14001083b  call qword ptr [rip + 0x379ef]   ; CALL ??1QString@@QEAA@XZ
+0x140010841  nop 
+0x140010842  lea rcx, [rbp + 0x80]
+0x140010849  call qword ptr [rip + 0x379e1]   ; CALL ??1QString@@QEAA@XZ
+0x14001084f  nop 
+0x140010850  lea rcx, [rbp + 0x88]
+0x140010857  call qword ptr [rip + 0x379d3]   ; CALL ??1QString@@QEAA@XZ
+0x14001085d  nop 
+0x14001085e  lea rcx, [rbp + 0xb8]
+0x140010865  call qword ptr [rip + 0x379c5]   ; CALL ??1QString@@QEAA@XZ
+0x14001086b  test bl, bl
+0x14001086d  je 0x140010958
+0x140010873  mov dword ptr [rsp + 0x28], 0xffffffff
+0x14001087b  mov qword ptr [rsp + 0x20], r14
+0x140010880  lea r9, [rip + 0x39c69]   ; "__LANGID__"
+0x140010887  lea r8, [rip + 0x3e47a]   ; "__LANG__"
+0x14001088e  lea rdx, [rbp + 0xa8]
+0x140010895  lea rcx, [rbp - 0x60]
+0x140010899  call qword ptr [rip + 0x37bc9]   ; CALL ?translate@QTranslator@@UEBA?AVQString@@PEBD00H@Z
+0x14001089f  nop 
+0x1400108a0  mov rdx, rax
+0x1400108a3  lea rcx, [rbp + 0x100]
+0x1400108aa  call qword ptr [rip + 0x37930]   ; CALL ??0QVariant@@QEAA@AEBVQString@@@Z
+0x1400108b0  mov r14, rax
+0x1400108b3  mov dword ptr [rsp + 0x28], 0xffffffff
+0x1400108bb  mov qword ptr [rsp + 0x20], 0
+0x1400108c4  lea r9, [rip + 0x39c15]   ; "__LANGNAME__"
+0x1400108cb  lea r8, [rip + 0x3e436]   ; "__LANG__"
+0x1400108d2  lea rdx, [rbp + 0xa0]
+0x1400108d9  lea rcx, [rbp - 0x60]
+0x1400108dd  call qword ptr [rip + 0x37b85]   ; CALL ?translate@QTranslator@@UEBA?AVQString@@PEBD00H@Z
+0x1400108e3  mov rsi, rax
+0x1400108e6  mov rax, qword ptr [r15 + 0x30]
+0x1400108ea  mov rdi, qword ptr [rax + 0x78]
+0x1400108ee  mov rcx, rdi
+0x1400108f1  call qword ptr [rip + 0x38b29]   ; CALL ?count@QComboBox@@QEBAHXZ
+0x1400108f7  mov ebx, eax
+0x1400108f9  lea rcx, [rbp + 0x98]
+0x140010900  call qword ptr [rip + 0x3811a]   ; CALL ??0QIcon@@QEAA@XZ
+0x140010906  nop 
+0x140010907  mov qword ptr [rsp + 0x20], r14
+0x14001090c  mov r9, rsi
+0x14001090f  mov r8, rax
+0x140010912  mov edx, ebx
+0x140010914  mov rcx, rdi
+0x140010917  call qword ptr [rip + 0x38ae3]   ; CALL ?insertItem@QComboBox@@QEAAXHAEBVQIcon@@AEBVQString@@AEBVQVariant@@@Z
+0x14001091d  nop 
+0x14001091e  lea rcx, [rbp + 0x98]
+0x140010925  call qword ptr [rip + 0x3805d]   ; CALL ??1QIcon@@QEAA@XZ
+0x14001092b  nop 
+0x14001092c  lea rcx, [rbp + 0xa0]
+0x140010933  call qword ptr [rip + 0x378f7]   ; CALL ??1QString@@QEAA@XZ
+0x140010939  nop 
