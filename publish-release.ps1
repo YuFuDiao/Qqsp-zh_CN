@@ -22,6 +22,8 @@ $Branch = 'main'
 # ---- the release we publish ----
 $Tag      = 'v1.9.0-zh_CN'
 $RelName  = 'Qqsp 1.9.0 汉化便携版'
+$AssetName = 'Qqsp-1.9.0-win64-zh_CN.rar'
+$AssetSha = '7f1d2d011187ae6268d3777ecd8268131d18ca4c7e575cf0827bd82f252e00f9'
 # Prefer an asset stored next to this script (keeps the machine-specific path
 # out of the published script); fall back to a local copy on F:.
 $AssetCandidates = @(
@@ -29,8 +31,6 @@ $AssetCandidates = @(
     (Join-Path $PSScriptRoot 'Qqsp-1.9.0-win64.rar'),
     'F:\Qqsp-1.9.0-win64.rar'
 )
-$AssetName = 'Qqsp-1.9.0-win64-zh_CN.rar'
-$AssetSha = '7f1d2d011187ae6268d3777ecd8268131d18ca4c7e575cf0827bd82f252e00f9'
 
 function Info($m) { Write-Host "[·] $m" -ForegroundColor Gray }
 function Ok($m)   { Write-Host "[OK] $m" -ForegroundColor Green }
