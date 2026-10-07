@@ -8,7 +8,23 @@ Qqsp 播放器的简体中文汉化（**版本 1.9.0**）。
 
 ---
 
-## 一、直接使用（不想自己编译）
+## 一、下载即玩（推荐）
+
+到 [**Releases**](https://github.com/YuFuDiao/Qqsp-zh_CN/releases) 下载 **`Qqsp-1.9.0-win64-zh_CN.rar`**，解压后双击 `Qqsp.exe` 即可，**开箱就是中文界面**，不需要另行安装 Qt 运行库。
+
+包内已包含：
+
+```
+Qqsp-1.9.0-win64/
+  Qqsp.exe            已汉化（窗口标题、菜单、选项、引擎错误提示均为中文）
+  Qqsp.zh_CN.qm       简体中文语言包
+  Qqsp.zh-CN.qm       连字符别名（见第五节，防界面回英文）
+  Qqsp.exe.bak        原始未汉化版本，想还原时改名为 Qqsp.exe 覆盖回去即可
+  Qt5*.dll / plugins/ Qt 运行库，随包提供
+  vc_redist.x64.exe   Visual C++ 运行库安装程序（若提示缺少 dll 时运行）
+```
+
+## 二、只替换语言包（已有 Qqsp 1.9.0）
 
 下载 [`out/Qqsp.exe`](out/Qqsp.exe) 与 [`out/Qqsp.zh_CN.qm`](out/Qqsp.zh_CN.qm)，覆盖到 Qqsp 1.9.0 的安装目录即可：
 
@@ -16,7 +32,7 @@ Qqsp 播放器的简体中文汉化（**版本 1.9.0**）。
 Qqsp-1.9.0-win64/
   Qqsp.exe            <- 用 out/Qqsp.exe 覆盖（建议先备份原文件）
   Qqsp.zh_CN.qm       <- 新增
-  Qqsp.zh-CN.qm       <- 新增（连字符别名，见第四节）
+  Qqsp.zh-CN.qm       <- 新增（连字符别名，见第五节）
 ```
 
 已验证的 SHA256：
@@ -30,7 +46,7 @@ Qqsp-1.9.0-win64/
 
 还原：用你备份的原版 `Qqsp.exe` 覆盖回去，并删掉两个 `.qm` 即可。
 
-## 二、仓库结构
+## 三、仓库结构
 
 ```
 out/            编译产物
@@ -56,7 +72,7 @@ original/       放置原始 Qqsp.exe 的位置（存放的是 1.9.0 未汉化�
 docs/           详细说明
 ```
 
-## 三、重新打包
+## 四、重新打包
 
 ### 改词条后重新生成语言包
 
@@ -85,7 +101,7 @@ python tools\patch_exe2.py
 
 **可复现性已验证**：以 SHA256 为 `7ad434c3…` 的原始 exe 为输入，本工具链输出 SHA256 `390ce5d3…`，与仓库内 `out/Qqsp.exe` **逐字节一致**。
 
-## 四、为什么要那个连字符别名 `Qqsp.zh-CN.qm`
+## 五、为什么要那个连字符别名 `Qqsp.zh-CN.qm`
 
 Qqsp 按 `Qqsp.<language 的值>.qm` 查找语言包，而 `language` 默认取 `QLocale::system().name()`。在中文 Windows 上这个值是 **`zh-CN`（连字符）**，但语言包文件叫 **`zh_CN`（下划线）**——差一个字符，`QTranslator::load()` 又不会把连字符换成下划线，于是找不到语言包、界面全英文。
 
@@ -93,13 +109,13 @@ Qqsp 按 `Qqsp.<language 的值>.qm` 查找语言包，而 `language` 默认取 
 
 放一份逐字节相同的 `Qqsp.zh-CN.qm` 后，`zh-CN` 与 `zh_CN` 都能命中，配置再被写坏也不会掉回英文。副作用是「设置 → 选项 → 语言」下拉框会多出一条同名的「简体中文」（两条的 data 都是 `zh_CN`，选哪条都对）。
 
-## 五、已知未汉化项
+## 六、已知未汉化项
 
 * **游戏剧情文本**——在 `.qsp` 文件内部，与本播放器无关；
 * Oniguruma 正则库内部错误串、`std::exception`（如 `bad allocation`）——仅在致命错误时出现，属程序内部诊断信息；
 * WebEngine 右键菜单——上游用 `setContextMenuPolicy(Qt::NoContextMenu)` 主动关闭，不存在该菜单。
 
-## 六、许可
+## 七、许可
 
 * 本仓库的汉化内容（语言包、补丁脚本、文档）以 **MIT** 发布，见 [LICENSE](LICENSE)。
 * 上游 Qqsp 同为 **MIT License, Copyright © 2017-2018 Sonnix**，原文见 [LICENSE-QQSP](LICENSE-QQSP)。
